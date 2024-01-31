@@ -74,7 +74,7 @@ collisions:
   only-players-collide: false
 entities:
   armor-stands:
-    do-collision-entity-lookups: true
+    do-collision-entity-lookups: false
     tick: false
   behavior:
     allow-spider-world-border-climbing: true
@@ -142,28 +142,28 @@ entities:
     creative-arrow-despawn-rate: default
     despawn-ranges:
       ambient:
-        hard: 56
+        hard: 72
         soft: 30
       axolotls:
-        hard: 56
+        hard: 72
         soft: 30
       creature:
-        hard: 56
+        hard: 72
         soft: 30
       misc:
-        hard: 56
+        hard: 72
         soft: 30
       monster:
-        hard: 56
+        hard: 72
         soft: 30
       underground_water_creature:
-        hard: 56
+        hard: 72
         soft: 30
       water_ambient:
-        hard: 56
+        hard: 72
         soft: 30
       water_creature:
-        hard: 56
+        hard: 72
         soft: 30
     disable-mob-spawner-spawn-egg-transformation: false
     duplicate-uuid:
@@ -189,13 +189,13 @@ entities:
         maximum: 70.0
         minimum: 50.0
     spawn-limits:
-      ambient: 4
-      axolotls: -2
-      creature: 3
-      monster: 18
-      underground_water_creature: 2
-      water_ambient: 5
-      water_creature: 2
+      monsters: 20
+      animals: 5
+      water-animals: 2
+      water-ambient: 2
+      water-underground-creature: 3
+      axolotls: 3
+      ambient: 1
     wandering-trader:
       spawn-chance-failure-increment: 25
       spawn-chance-max: 75
@@ -289,19 +289,19 @@ spawn:
 tick-rates:
   behavior:
     villager:
-      cquirepoi: 120
       validatenearbypoi: 60
+      acquirepoi: 120
   container-update: 1
   dry-farmland: 1
   grass-spread: 1
   mob-spawner: 1
   sensor:
     villager:
-      nearestbedsensor: 80
-      nearestlivingentitysensor: 40
-      playersensor: 40
       secondarypoisensor: 80
+      nearestbedsensor: 80
       villagerbabiessensor: 40
+      playersensor: 40
+      nearestlivingentitysensor: 40
   wet-farmland: 1
 unsupported-settings:
   fix-invulnerable-end-crystal-exploit: true
